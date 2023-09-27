@@ -34,6 +34,10 @@ async def on_message(message):
         await canale.send(testo)
     if testoMs.startswith('!papera'):
         await canale.send(f'Hai ragione, papera é proprio scemo, {author.mention}!')
+    if testoMs.startswith('!checkprise'):
+        testoMs=testoMs.split()[1]
+        response = get(testoMs)
+        testo = f'Il prezzo attuale per il 1 BTC é pari a {response} euro'
 
 
 # Avvia il bot
