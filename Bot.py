@@ -4,6 +4,8 @@ from requests import get
 from settings import DISCORD_API_SECRET
 
 # Configura il tuo bot
+# il token è ora storato in .env, in sicurezza
+# todo: modificare il prefix in modo aggiornato, decidere il case di scrittura, rendere il channelId dinamico
 TOKEN = DISCORD_API_SECRET
 PREFIX = '!'
 
