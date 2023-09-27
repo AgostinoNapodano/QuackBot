@@ -1,9 +1,10 @@
 import discord
 from discord import Client
 from requests import get
+from settings import DISCORD_API_SECRET
 
 # Configura il tuo bot
-TOKEN = 'MTE1NTk1NTk0OTc3Mzc5OTQ5NQ.GjRW6Q.ZH08rkshrR_pol-Vbq2iizu0xuWc1ydQdKHIAs'
+TOKEN = DISCORD_API_SECRET
 PREFIX = '!'
 
 # Crea un'istanza del bot
