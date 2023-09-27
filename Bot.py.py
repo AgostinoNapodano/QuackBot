@@ -9,13 +9,14 @@ PREFIX = '!'
 # Crea un'istanza del bot
 bot = commands.Bot(command_prefix=PREFIX)
 
-# Definisci un evento di risposta al messaggio "ciao"
-@bot.event
-async def on_message(message):
-    if message.author == bot.user:
-        return  # Ignora i messaggi inviati dal proprio bot per evitare cicli infiniti
-    if "ciao" in message.content.lower():
-        await message.channel.send(f'Ciao, {message.author.mention}!')
+@bot.command(name='saluta', help='Il bot ti saluterà in un canale testuale.')
+async def saluta(ctx):
+    author = ctx.author
+    await ctx.send(f'Ciao, {author.mention}!')
+
+@bot.command(name='papera', help='Il bot risponderà con una risposta personalizzata.')
+async def papera(ctx):
+    await ctx.send(f'Che papera cornuta, {ctx.author.mention}!')
 
 # Avvia il bot
 bot.run(TOKEN)
