@@ -1,4 +1,4 @@
-
+import discord
 from discord import Client
 from requests import get
 
@@ -7,12 +7,13 @@ TOKEN = 'MTE1NTk1NTk0OTc3Mzc5OTQ5NQ.GjRW6Q.ZH08rkshrR_pol-Vbq2iizu0xuWc1ydQdKHIA
 PREFIX = '!'
 
 # Crea un'istanza del bot
-CHANNEL_ID=1156612455963828245
+CHANNEL_ID = 1156612455963828245
 
-bot = Client()
+bot = Client(intents=discord.Intents.default())
 
-#@bot.event
-#async def on_ready():
+
+# @bot.event
+# async def on_ready():
 #    response = get("https://api.kucoin.com/api/v1/market/stats?symbol=BTC-EUR")
 #    prezzo_attuale = float(response.json()['data']['buy'])
 #    canale = bot.get_channel(CHANNEL_ID)
@@ -35,7 +36,7 @@ async def on_message(message):
     if testoMs.startswith('!papera'):
         await canale.send(f'Hai ragione, papera é proprio scemo, {author.mention}!')
     if testoMs.startswith('!checkprise'):
-        testoMs=testoMs.split()[1]
+        testoMs = testoMs.split()[1]
         response = get(testoMs)
         testo = f'Il prezzo attuale per il 1 BTC é pari a {response} euro'
 
