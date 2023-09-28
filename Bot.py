@@ -1,5 +1,5 @@
+import discord
 import settings
-from discord import Client
 from requests import get
 from settings import DISCORD_API_SECRET
 from discord.ext import commands
@@ -11,8 +11,9 @@ TOKEN = DISCORD_API_SECRET
 
 # Crea un'istanza del bot
 CHANNEL_ID = 1156612455963828245
+intents = discord.Intents.all()
+bot = commands.Bot(command_prefix='!', intents=intents)
 
-bot = commands.Bot()
 
 @bot.event
 async def on_message(message):
@@ -36,4 +37,4 @@ async def on_message(message):
 
 
 # Avvia il bot
-bot.run(TOKEN)
+bot.run(settings.DISCORD_API_SECRET)
