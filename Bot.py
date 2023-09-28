@@ -1,6 +1,6 @@
 import discord
 import settings
-import AmazonScript.AmazonPreis as am
+import AmazonScript.AmazonPrezzo as am
 from requests import get
 from settings import DISCORD_API_SECRET
 from discord.ext import commands
@@ -23,7 +23,7 @@ bot = commands.Bot(command_prefix='!', intents=intents)
 # ESSO PUO' ESSERE ATTIVATO ANCHE DALLA PAGINA UFFICIALE andando su Privileged Gateway Intents
 @bot.command()
 async def amazon(ctx):
-    await ctx.send('Ciao! Sono un bot!')
+    await ctx.send(am.AmazonMain())
 
 
 @bot.command()
