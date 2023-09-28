@@ -7,7 +7,7 @@ from discord.ext import commands
 # Configura il tuo bot
 # il token è ora storato in .env, in sicurezza
 # todo: modificare il prefix in modo aggiornato, decidere il case di scrittura, rendere il channelId dinamico
-TOKEN = DISCORD_API_SECRET
+
 
 # Crea un'istanza del bot
 CHANNEL_ID = 1156612455963828245
