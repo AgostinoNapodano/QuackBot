@@ -1,3 +1,3 @@
-def StartFunktion(canale):
-    testo = "Grazie per l'utilizzo della funyzione AMAZON :D"
-    canale.send(testo)
+def AmazonMain():
+    testo = "Grazie per l'utilizzo della funzione AMAZON :D"
+    return testo
